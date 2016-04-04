@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar'; // I need to specify the path to import components I write
 import VideoList from './components/video_list';
+import VideoDetail from './components/video_detail';
 const API_KEY = 'AIzaSyC4oB08Kr03e9qAYqgBy4bl23WEI8MD2lI';
 
 
@@ -19,6 +20,7 @@ class App extends Component {
     return (
     <div>
       <SearchBar />
+      <VideoDetail video={this.state.videos[0]} />
       <VideoList videos={this.state.videos} />
     </div>
     );
